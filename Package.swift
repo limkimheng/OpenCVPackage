@@ -3,7 +3,10 @@
 import PackageDescription
 
 let package = Package(
-    name: "OpenCVPackage",
+    name: "OpenCV",
+    platforms: [
+        .iOS(.v13)
+    ],
     products: [
         .library(
             name: "OpenCV",
@@ -13,7 +16,7 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "opencv2",
-            path: "opencv2.xcframework"
+            path: "Frameworks/opencv2.framework"
         )
     ]
 )
