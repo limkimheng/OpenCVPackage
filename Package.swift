@@ -11,19 +11,13 @@ let package = Package(
     products: [
         .library(
             name: "OpenCV",
-            targets: ["OpenCV"]
+            targets: ["opencv2"]
         )
     ],
     targets: [
         .binaryTarget(
             name: "opencv2",
             path: "opencv2.xcframework"
-        ),
-        .target(
-            name: "OpenCV",
-            dependencies: [
-                "opencv2"
-            ]
         )
     ]
 )
